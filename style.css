@@ -1,0 +1,578 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;300;400;600;800&display=swap');
+*{
+    box-sizing: border-box;
+    font-family: 'Work Sans';
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    /*Permite deslizar cuando le doy clic a el menu */
+    scroll-behavior: smooth;
+}
+
+/*Menu*/
+.container-header{
+    background: #1e2326;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+
+}
+
+.container-header header{
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+
+}
+
+
+.container-header header .logo a{
+    font-family: 'Righteous';
+    font-size: 36px;
+    color: aqua ;
+    text-decoration: none;
+
+}
+
+.container-header header ul{
+    display: flex;
+    list-style: none;
+}
+
+.container-header header nav ul li a{
+    text-align: none;
+    color: white; 
+    margin: 0 15px;
+    padding: 3px;
+    transition: .6s;
+    text-decoration: none;
+}
+.container-header header nav ul li a:hover{
+    color: #1069ee;
+}
+
+.nav-responsive{
+    background-color: #1069ee;
+    color: azure;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor:pointer;
+    display: none;
+}
+
+/*SECCION HOME*/
+.home{
+    background: linear-gradient(to top, rgba(226, 15, 30, 0), rgba(255,255,255,0)),
+    url(Imagens/cd-2.jpg);
+    background-size: cover;
+    height: 100vh;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.home .container-banner{
+    padding: 20px;
+    background-color:#0d0d0e;
+    max-width: 350px;
+    margin: auto;
+    text-align: center;
+    border-radius: 40px;
+}
+
+.home .container-banner img {
+    margin: top 40px;
+    border: 10px solid #1069ee;
+    display: block;
+    width: 80%;
+    margin: auto;
+    border-radius: 100%;
+}
+/*el marging-top y el margingreduce o aumenta la distancia entre letras */
+.home .container-banner h1 {
+    margin-top: 4px;
+    font-size: 32px;
+    font-family: "Helvetica Neue",;
+}
+
+.home .container-banner h2 {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.home .container-banner .redes a{
+    color:azure;
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid #fff;
+    border-radius:  100%;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    margin: 4px 5px;
+    font-size: 20px;
+    transition: .3s;
+}
+
+.home .container-banner .redes a:hover{
+    background-color: #0b8bf3;
+}
+
+/*PArte acerca de mi ediccion */
+.acercademi{
+    background-color: #0a0a0a;
+    color: white;
+    padding: 50px 20px;
+}
+.acercademi .contenido-seccion{
+    max-width: 1100px;
+    margin: auto;
+}
+
+.acercademi h2{
+    font-size: 38px;
+    font-family: 'Verdana';
+    text-align: center;
+    padding: 20px 0; 
+}
+
+.acercademi .contenido-seccion p{
+    font: 20px;
+    line-height: 22px;
+    margin-bottom: 20px;
+
+}
+
+.acercademi .contenido-seccion p span{
+    color:#0a95f1;
+    font-weight: bold; 
+}
+
+
+/*Seccion Habilidades*/
+
+.habilidades{
+    background-color: #0f0f0f;
+    color: #f4f6f8;
+    padding: 10px 10px;
+}
+
+.habilidades .container-seccion {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.habilidades h2{
+    font: size 48px;
+    font-family: 'verdana';
+    text-align: center;
+    padding: 20px 0;
+}
+
+.habilidades .fila{
+    display: flex;
+}
+
+.habilidades .fila .col{
+    width:50%;
+    padding: 0 20px;
+}
+
+.habilidades .fila .col h3{
+    font: size 28px;
+    font-family: 'verdana';
+    margin: bottom 25px;
+}
+
+.habilidades .habilidades > span{
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.habilidades .habilidades .barra-habilidad{
+    height: 8px;
+    width:80%;
+    background-color: #f3f5f7;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.habilidades .habilidades .progreso {
+    background-color: #249cfd;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 8px;
+    
+}
+
+.habilidades .habilidades .barra-habilidad span{
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    background-color:#0b8bf3;
+    border-radius: 50px;
+    line-height: 40px;
+    text-align: center;
+    top: -17px;
+    right: -15px;
+    font-size: 14px;
+}
+/*Estas clases se agregan mediantes dinamicas de javascript*/
+.habilidades .habilidades .javascript{
+    width: 0%;
+    animation: 2s javascript forwards;
+}
+@keyframes javascript {
+    0% {width: 0%;}
+    100% {width: 30%;}
+}
+
+.habilidades .habilidades .htmlcss{
+    width: 0%;
+    animation: 2s htmlcss forwards;
+}
+@keyframes htmlcss {
+    0% {width: 0%;}
+    100% {width: 35%;}
+}
+
+.habilidades .habilidades .photoshop{
+    width: 0%;
+    animation: 2s photoshop forwards;
+}
+@keyframes photoshop {
+    0% {width: 0%;}
+    100% {width: 45%;}
+}
+
+.habilidades .habilidades .githud{
+    width: 0%;
+    animation: 2s github forwards;
+}
+@keyframes github {
+    0% {width: 0%;}
+    100% {width: 10%;}
+}
+
+.habilidades .habilidades .ilustrator{
+    width: 0%;
+    animation: 2s ilustrator forwards;
+}
+@keyframes ilustrator {
+    0% {width: 0%;}
+    100% {width: 25%;}
+}
+
+.habilidades .habilidades .comunicacion{
+    width: 0%;
+    animation: 2s comunicacion forwards;
+}
+@keyframes comunicacion {
+    0% {width: 0%;}
+    100% {width: 80%;}
+}
+
+.habilidades .habilidades .equipo{
+    width: 0%;
+    animation: 2s equipo forwards;
+}
+@keyframes equipo {
+    0% {width: 0%;}
+    100% {width: 75%;}
+}
+
+.habilidades .habilidades .creatividad{
+    width: 0%;
+    animation: 2s creatividad forwards;
+}
+@keyframes creatividad {
+    0% {width: 0%;}
+    100% {width: 85%;}
+}
+
+.habilidades .habilidades .dedicacion{
+    width: 0%;
+    animation: 2s dedicacion forwards;
+}
+@keyframes dedicacion {
+    0% {width: 0%;}
+    100% {width: 85%;}
+}
+
+.habilidades .habilidades .proyecto{
+    width: 0%;
+    animation: 2s proyecto forwards;
+}
+@keyframes proyecto {
+    0% {width: 0%;}
+    100% {width: 15%;}
+}
+
+/*Seccion Experiencia*/
+.experiencia{
+    background-color: #0f0f0f;
+    color: #eef3f7;
+    padding: 40px 20px;
+}
+
+.experiencia .container-seccion{
+    max-width: 1100px;
+    margin: auto;
+}
+
+.experiencia h2{
+    font-size: 40px;
+    font-family: 'verdana';
+    text-align: center;
+    padding: 40px 0;
+}
+.experiencia .fila{
+    display: flex;
+    justify-content: space-between;
+}
+
+.experiencia .fila .col{
+    width: 50%;
+    padding: 0 20px;
+}
+.experiencia .fila .col h3{
+    font-size: 28px;
+    font-family: 'verdana';
+    margin-bottom: 25px;
+}
+.experiencia .fila .izquierda{
+    border-right:2px solid #9fb7be;
+}
+.experiencia .fila .derecha{
+    border-left: 2px solid #b5d7e4;
+}
+.experiencia .fila .item{
+    padding: 25px;
+    margin-bottom: 30px;
+    background-color: #0a0a0a;
+    position: relative;
+}
+.experiencia .fila .item{
+    font: size 15px;
+    margin-bottom: 10px;
+}
+.experiencia .fila .item .casa{
+    color: #10a8ee;
+    font-size: 15px;
+    font-weight: bold;
+    display: block;
+}
+.experiencia .fila .item .fecha{
+    display:block;
+    color: #1069ee;
+    margin-bottom: 10px;
+}
+.experiencia .fila .item{
+    line-height: 20px;
+}
+.experiencia .fila .izq{
+    border-right: 6px solid #0b8bf3;
+    margin-right: 20px;
+}
+.experiencia .fila .der{
+    border-left: 6px solid #0b8bf3;
+    margin-left: 20px;
+}
+.experiencia .fila .item .conectori{
+    height: 2px;
+    background-color: #0b8bf3;
+    width: 47px;
+    position: absolute;
+    top: 50%;
+    right: -47px;
+    z-index: 5;
+}
+.experiencia .fila .item .conectori .circuloi{
+    display: block;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: #0b8bf3;
+    float: right;
+    position: relative;
+    bottom: 4px;
+}
+.experiencia .fila .item .conectord{
+    height: 2px;
+    background-color: #0b8bf3;
+    width: 47px;
+    position: absolute;
+    top: 50%;
+    left: -47px;
+    z-index: 5;
+}
+.experiencia .fila .item .conectord .circulod{
+    display: block;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: #0b8bf3;
+    float: left;
+    position: relative;
+    bottom: 4px;
+}
+
+/*Seccion Portafolio*/
+
+.portafolio {
+    background-color: #0a0a0a;
+    color: #b005ff;
+    padding: 50px 20px;
+}
+.portafolio .container-seccion {
+    max-width: 1100px;
+    margin: auto;
+}
+.portafolio h2{
+    font-size:  48px;
+    font-family: 'verdana';
+    text-align: center;
+    padding: 20px 0;
+}
+.portafolio .galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+}
+.portafolio .galeria .proyecto{
+    position: relative;
+    max-width: 340px;
+    height: fit-content;
+    margin: 10px;
+    cursor: pointer;
+}
+.portafolio .galeria .proyecto{
+    width: 100%;
+    display: block;
+}
+.portafolio .galeria .proyecto .overlay{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: linear-gradient(rgba(255,255,255,0),rgba(255,255,255,0));
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    transition:1s;
+    font-size: 18px;
+    letter-spacing: 3px;
+    opacity: 0;
+}
+.portafolio .galeria .proyecto .overlay h3{
+    margin: bottom 20px;
+    transition: 1s;
+}
+.portafolio .galeria .proyecto .overlay:hover{
+    opacity: 1;
+}
+.portafolio .galeria .proyecto .overlay:hover h3{
+    margin: bottom 0px;
+}
+
+/*Seccion Contacto*/
+.contacto{
+    background-image: url(imagens/cd-2.jpg);
+    background-color: #0a0a0a;
+    color: #0a95f1;
+    padding: 50px 20px;
+}
+.contacto .container-seccion {
+    max-width: 1100px;
+    margin: auto;
+}
+.contacto h2{
+    font-size:  48px;
+    font-family: 'verdana';
+    text-align: center;
+    padding: 20px 0;
+}
+.contacto .galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+}
+.contacto .galeria .proyecto{
+    position: relative;
+    max-width: 340px;
+    height: fit-content;
+    margin: 10px;
+    cursor: pointer;
+}
+.contacto .galeria .proyecto{
+    width: 100%;
+    display: block;
+}
+
+/*Seccion Responsive */
+@media screen and (max-width:980px){
+    nav{
+        display: none;
+    }
+    .nav-responsive{
+        display: block;
+
+    }
+    nav.responsive{
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 75px;
+        background-color:#0a95f1;
+        width: 180px;
+    }
+    nav.responsive ul{
+        display: block !important;
+
+    }
+    nav.responsive ul li{
+        border-bottom: 1px solid #f3f5f7;
+        padding: 10px 0;
+    }
+    
+}
+@media screen and (min-width: 700px){
+    .habilidades .fila{
+        display: block;
+    }
+    .habilidades .fila .col{
+        width: 100%;
+    }
+    .habilidades .fila .col .barra-habilidad{
+        width: 100%;
+    }
+    .experiencia .fila{
+        display: block;
+    }
+    .experiencia .fila .col{
+        width: 90%;
+    }
+    .experiencia .fila .derecha{
+        margin: left 20px;
+    }
+    .portafolio .galeria{
+        display: block;
+        width: 100%;
+    }
+    .portafolio .galeria .proyecto{
+        max-width: 100%;
+    }
+    .portafolio .galeria .proyecto img{
+        width: 100%;
+    }
+}
